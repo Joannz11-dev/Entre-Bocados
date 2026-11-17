@@ -1,2 +1,3 @@
 import { Stack } from 'expo-router';
-export default function RootLayout() { return <Stack screenOptions={{ headerShown: false }} />; }
+import { DemoProvider } from '../state/demo';
+export default function RootLayout() { return <DemoProvider><Stack screenOptions={{ headerShown: false }} /></DemoProvider>; }
