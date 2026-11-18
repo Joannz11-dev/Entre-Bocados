@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, KeyboardAvoidingView, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from 'expo-router';
 import type { Restaurant } from '../types/restaurant';
@@ -33,11 +33,12 @@ export const styles = StyleSheet.create({
   avatar: { fontSize: 48, backgroundColor: '#F8E3D4', width: 88, height: 88, textAlign: 'center', textAlignVertical: 'center', borderRadius: 44, overflow: 'hidden' },
 });
 
-export function Screen({ children, navigation = true }: { children: React.ReactNode; navigation?: boolean }) {
-  return <SafeAreaView style={styles.screen}><ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled"><Text style={styles.brand}>ENTRE BOCADOS / DEMO</Text>{children}</ScrollView>{navigation && <View style={styles.nav}><Link href="/explore">Explorar</Link><Link href="/favorites">Favoritos</Link><Link href="/plans">Planes</Link><Link href="/profile">Perfil</Link></View>}</SafeAreaView>;
+export function Screen({ children, navigation = true, brand = 'ENTRE BOCADOS / DEMO', avoidKeyboard = false }: { children: React.ReactNode; navigation?: boolean; brand?: string; avoidKeyboard?: boolean }) {
+  const content = <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled"><Text style={styles.brand}>{brand}</Text>{children}</ScrollView>;
+  return <SafeAreaView style={styles.screen}>{avoidKeyboard ? <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>{content}</KeyboardAvoidingView> : content}{navigation && <View style={styles.nav}><Link href="/explore">Explorar</Link><Link href="/favorites">Favoritos</Link><Link href="/plans">Planes</Link><Link href="/profile">Perfil</Link></View>}</SafeAreaView>;
 }
-export function Button({ title, onPress, secondary = false }: { title: string; onPress: () => void; secondary?: boolean }) {
-  return <Pressable accessibilityRole="button" onPress={onPress} style={[styles.button, secondary && styles.buttonAlt]}><Text style={[styles.buttonText, secondary && styles.buttonAltText]}>{title}</Text></Pressable>;
+export function Button({ title, onPress, secondary = false, disabled = false }: { title: string; onPress: () => void; secondary?: boolean; disabled?: boolean }) {
+  return <Pressable accessibilityRole="button" accessibilityState={{ disabled }} disabled={disabled} onPress={onPress} style={({ pressed }) => [styles.button, secondary && styles.buttonAlt, disabled && { opacity: 0.5 }, pressed && !disabled && { opacity: 0.86 }]}><Text style={[styles.buttonText, secondary && styles.buttonAltText]}>{title}</Text></Pressable>;
 }
 export function Chips({ items, value, onChange }: { items: string[]; value: string; onChange: (value: string) => void }) {
   return <View style={styles.row}>{items.map(item => <Pressable accessibilityRole="button" accessibilityState={{ selected: value === item }} key={item} onPress={() => onChange(item)} style={[styles.button, value !== item && styles.buttonAlt]}><Text style={[styles.buttonText, value !== item && styles.buttonAltText]}>{item}</Text></Pressable>)}</View>;

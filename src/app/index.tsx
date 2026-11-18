@@ -19,6 +19,7 @@ export default function Welcome() {
     {data.started && <Button title="Continuar con mi demo" onPress={() => router.replace('/explore')} />}
     <Button title="Crear perfil de demostración" onPress={() => router.push('/register')} />
     <Button title="Iniciar sesión (demo)" secondary onPress={() => router.push('/login')} />
+    <Button title="Probar planes y chat sin conexión" secondary onPress={() => router.push('/local-plans/shared-plans')} />
     <Text style={styles.note}>Acceso y registro simulados. Sin contraseñas ni cuentas reales.</Text>
   </Screen>;
 }
