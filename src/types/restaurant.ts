@@ -11,7 +11,14 @@ export type Restaurant = {
   image_url: string | null;
   menu_url: string | null;
   maps_url: string | null;
+  /** Datos enriquecidos cuando el lugar viene de Google Maps. */
+  rating?: number | null;
+  rating_count?: number | null;
+  distance_km?: number | null;
+  geo?: { latitude: number; longitude: number } | null;
 };
+
+export type Coords = { latitude: number; longitude: number };
 
 export function formatPrice(place: Restaurant): string {
   if (place.price_min == null) return 'Precio por confirmar';

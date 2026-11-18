@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T05:20:00-05:00",
+  "title": "Design System: Entre Bocados",
+  "extensions": {
+    "colorMeta": {
+      "pink": { "role": "primary", "displayName": "Rosa Antojo", "canonical": "#F43F6D", "tonalRamp": ["#5A0C22", "#8A1233", "#B81B44", "#E0245A", "#F43F6D", "#FF6FA0", "#FF9EC2", "#FFD3E0"] },
+      "pink-fill": { "role": "primary", "displayName": "Rosa Relleno", "canonical": "#E0245A", "tonalRamp": ["#5A0C22", "#8A1233", "#B81B44", "#E0245A", "#F43F6D", "#FF6FA0", "#FF9EC2", "#FFD3E0"] },
+      "pink-soft": { "role": "primary", "displayName": "Rosa Pastel", "canonical": "#FFE1EA", "tonalRamp": ["#B81B44", "#E0245A", "#F43F6D", "#FF9EC2", "#FFC2D6", "#FFE1EA", "#FFF0F5", "#FFF8FA"] },
+      "violet": { "role": "secondary", "displayName": "Violeta Fiesta", "canonical": "#7C4DFF", "tonalRamp": ["#2A1560", "#43279C", "#6A38F0", "#7C4DFF", "#9E7BFF", "#C0AAFF", "#EDE7FF", "#F7F4FF"] },
+      "violet-deep": { "role": "secondary", "displayName": "Violeta Profundo", "canonical": "#6A38F0", "tonalRamp": ["#2A1560", "#43279C", "#6A38F0", "#7C4DFF", "#9E7BFF", "#C0AAFF", "#EDE7FF", "#F7F4FF"] },
+      "green": { "role": "tertiary", "displayName": "Verde Manso", "canonical": "#17A55C", "tonalRamp": ["#06331C", "#0A5231", "#0E7A43", "#17A55C", "#4BC489", "#8DDCB0", "#DCF6E7", "#EEFBF3"] },
+      "green-soft": { "role": "tertiary", "displayName": "Verde Pastel", "canonical": "#DCF6E7", "tonalRamp": ["#0E7A43", "#17A55C", "#4BC489", "#8DDCB0", "#B8EBCB", "#DCF6E7", "#EEFBF3", "#F8FEFA"] },
+      "orange": { "role": "tertiary", "displayName": "Durazno Caliente", "canonical": "#FF8A3D", "tonalRamp": ["#4A2105", "#743608", "#A84B05", "#D96713", "#FF8A3D", "#FFAF72", "#FFE7D1", "#FFF4EA"] },
+      "orange-soft": { "role": "tertiary", "displayName": "Durazno Pastel", "canonical": "#FFE7D1", "tonalRamp": ["#A84B05", "#D96713", "#FF8A3D", "#FFAF72", "#FFD3AE", "#FFE7D1", "#FFF4EA", "#FFF9F3"] },
+      "amber": { "role": "tertiary", "displayName": "Miel", "canonical": "#FFC531", "tonalRamp": ["#3A2800", "#5E3F00", "#8A6205", "#C09114", "#FFC531", "#FFDA72", "#FFF2D2", "#FFF9EC"] },
+      "cream": { "role": "neutral", "displayName": "Crema Mesa", "canonical": "#FFF3E9", "tonalRamp": ["#401F33", "#7A5566", "#B08F80", "#E3C7B4", "#FCE4D2", "#FFF3E9", "#FFF8F1", "#FFFCF8"] },
+      "cream-deep": { "role": "neutral", "displayName": "Crema Hundido", "canonical": "#FCE4D2", "tonalRamp": ["#401F33", "#7A5566", "#B08F80", "#E3C7B4", "#FCE4D2", "#FFF3E9", "#FFF8F1", "#FFFCF8"] },
+      "ink": { "role": "neutral", "displayName": "Tinta Ciruela", "canonical": "#401F33", "tonalRamp": ["#1E0D17", "#401F33", "#5E3A4E", "#7A5566", "#A57F90", "#C9AAB6", "#E9DBE0", "#F8F2F4"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ciruela Suave", "canonical": "#7A5566", "tonalRamp": ["#1E0D17", "#401F33", "#5E3A4E", "#7A5566", "#A57F90", "#C9AAB6", "#E9DBE0", "#F8F2F4"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Títulos de pantalla y celebraciones; siempre Baloo 2." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de tarjeta y sección." },
+      "title": { "displayName": "Title", "purpose": "Nombres de lugar y héroes de tarjeta." },
+      "body": { "displayName": "Body", "purpose": "Copy y descripciones; nunca menor a 15px." },
+      "label": { "displayName": "Label", "purpose": "Botones, chips y metas en Nunito_800." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 10px 22px rgba(64,31,51,0.12)", "purpose": "Tarjetas, botones y chips contenedores; papel apoyado en la mesa." },
+      { "name": "float", "value": "0 12px 26px rgba(64,31,51,0.16)", "purpose": "Tab bar flotante, hubs y avatares destacados." }
+    ],
+    "motion": [
+      { "name": "spring-squish", "value": "withSpring(0.94 → 1, { damping: 10-16, stiffness: 220-260 })", "purpose": "Squish táctil de botones y burbujas." },
+      { "name": "rise-in", "value": "FadeInDown 420ms, delay 60-80ms escalonado, easing out-cubic", "purpose": "Entrada del contenido por pantalla; un momento firma por pantalla (deck, ruleta, confeti)." },
+      { "name": "deck-flight", "value": "withTiming 230ms ±900px + rotate ±16deg", "purpose": "Salida de la tarjeta deslizada." },
+      { "name": "roulette", "value": "withTiming 2800ms, easing bezier(0.12, 0, 0.16, 1)", "purpose": "Giro de la ruleta de rutas." }
+    ],
+    "breakpoints": [
+      { "name": "content-max", "value": "560px" },
+      { "name": "capture-mobile", "value": "390px" },
+      { "name": "capture-desktop", "value": "1440px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Píldora rosa relleno con texto blanco; squish al presionar.",
+      "html": "<button class=\"ds-btn-primary\">Guardar preferencias</button>",
+      "css": ".ds-btn-primary { background: #E0245A; color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; height: 54px; padding: 0 24px; border: none; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 22px rgba(64,31,51,0.12); transition: transform 0.15s ease-out, box-shadow 0.15s ease-out; } .ds-btn-primary:hover { transform: translateY(-1px); } .ds-btn-primary:active { transform: scale(0.94); } .ds-btn-primary:focus-visible { outline: 3px solid #7C4DFF; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Blanco con borde violeta suave y texto violeta profundo.",
+      "html": "<button class=\"ds-btn-ghost\">Iniciar sesión (demo)</button>",
+      "css": ".ds-btn-ghost { background: #fff; color: #6A38F0; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; height: 54px; padding: 0 24px; border: 2px solid #EDE7FF; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 22px rgba(64,31,51,0.12); transition: transform 0.15s ease-out; } .ds-btn-ghost:active { transform: scale(0.94); } .ds-btn-ghost:focus-visible { outline: 3px solid #7C4DFF; outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pastel del tono con tinta del mismo tono; seleccionado = relleno profundo.",
+      "html": "<span class=\"ds-chip ds-chip-selected\">Usaquén</span> <span class=\"ds-chip\">Chapinero</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 5px; min-height: 40px; padding: 0 14px; border-radius: 999px; background: #DCF6E7; color: #0E7A43; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; } .ds-chip-selected { background: #0E7A43; color: #fff; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Tarjeta pastelería blanca radio 24 con sombra card.",
+      "html": "<div class=\"ds-card\"><strong>¿Dónde comemos hoy?</strong><p>Desliza, guarda y arma el plan con tu gente.</p></div>",
+      "css": ".ds-card { background: #fff; border-radius: 24px; padding: 16px; box-shadow: 0 10px 22px rgba(64,31,51,0.12); font-family: 'Nunito', sans-serif; color: #401F33; display: flex; flex-direction: column; gap: 8px; } .ds-card strong { font-family: 'Baloo 2', sans-serif; font-size: 18px; } .ds-card p { margin: 0; color: #7A5566; font-size: 15px; line-height: 1.55; }"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Blanco radio 18 con borde Línea Arepa y caret rosa.",
+      "html": "<input class=\"ds-input\" placeholder=\"Ej. Pipa, Juancho…\" />",
+      "css": ".ds-input { background: #fff; color: #401F33; font-family: 'Nunito', sans-serif; font-size: 15px; height: 52px; padding: 0 16px; border: 2px solid #F3D9C8; border-radius: 18px; outline: none; } .ds-input::placeholder { color: #7A5566; } .ds-input:focus { border-color: #FFC531; caret-color: #E0245A; }"
+    },
+    {
+      "name": "Tab Bar",
+      "kind": "nav",
+      "refersTo": "components",
+      "description": "Píldora flotante con 4 paradas; activa con burbuja rosa.",
+      "html": "<nav class=\"ds-tabbar\"><a class=\"ds-tab ds-tab-active\" href=\"#\"><span class=\"ds-bubble\">◉</span>Explorar</a><a class=\"ds-tab\" href=\"#\"><span class=\"ds-bubble\">✧</span>Conectar</a><a class=\"ds-tab\" href=\"#\"><span class=\"ds-bubble\">▣</span>Planes</a><a class=\"ds-tab\" href=\"#\"><span class=\"ds-bubble\">☺</span>Perfil</a></nav>",
+      "css": ".ds-tabbar { display: flex; background: #fff; border-radius: 999px; padding: 8px 10px; margin: 0 24px 10px; box-shadow: 0 12px 26px rgba(64,31,51,0.16); } .ds-tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 52px; justify-content: center; text-decoration: none; color: #7A5566; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 10.5px; } .ds-bubble { width: 38px; height: 38px; border-radius: 999px; display: flex; align-items: center; justify-content: center; } .ds-tab-active { color: #B81B44; } .ds-tab-active .ds-bubble { background: #FFE1EA; }"
+    },
+    {
+      "name": "Swipe Stamp",
+      "kind": "custom",
+      "refersTo": "components",
+      "description": "Sello del deck que sube con el arrastre (ME INTERESA / NOPE / FAVORITO).",
+      "html": "<div class=\"ds-stamp\">ME INTERESA</div>",
+      "css": ".ds-stamp { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 1px; color: #B81B44; border: 3px solid #B81B44; border-radius: 12px; padding: 7px 14px; background: #fff; transform: rotate(-13deg); }"
+    },
+    {
+      "name": "Honest Note",
+      "kind": "custom",
+      "refersTo": "components",
+      "description": "Nota demo: crema hundido con icono info; la voz honesta de la marca.",
+      "html": "<div class=\"ds-honest\">Demo simulada: sin cuentas ni datos reales.</div>",
+      "css": ".ds-honest { display: flex; align-items: flex-start; gap: 8px; background: #FCE4D2; border-radius: 16px; padding: 12px; color: #401F33; font-family: 'Nunito', sans-serif; font-size: 13px; line-height: 1.5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Feria jugosa",
+    "overview": "La mesa de un festival de comida colombiana convertida en app: crema cálido como mantel, rosas y violetas que antojar, tarjetas de pastelería y una mascota niño chef que acompaña cada decisión. Todo es redondez amable, todo tiene relleno con tinta del mismo tono, y todo lo simulado se nombra en pantalla. El movimiento es físico y tierno: muelles con squish, sellos que suben con el swipe, confeti propio en las celebraciones — y la expresión nunca estorba la tarea.",
+    "keyCharacteristics": [
+      "Suelo crema #FFF3E9 con blobs pastel de esquina en cada pantalla",
+      "Tarjetas blancas de pastelería (radio 24–28) con sombra suave con offset",
+      "Píldora como forma dominante: botones, chips, tab bar y avatares",
+      "Mascota vectorial propia (niño chef) en poses wave/heart; Feather como único sistema de íconos",
+      "Baloo 2 display + Nunito cuerpo; español colombiano juguetón y honesto"
+    ],
+    "rules": [
+      { "name": "La Regla del Mismo Tono", "body": "Cada chip es un pastel con tinta de su propio tono; el gris jamás tiñe un chip.", "section": "colors" },
+      { "name": "La Regla del Relleno Honesto", "body": "Un color lleno carga texto blanco solo si pasa 4.5:1 — por eso el botón primario usa #E0245A.", "section": "colors" },
+      { "name": "La Regla del Aviso", "body": "Todo módulo simulado lleva su nota demo; el encanto nunca borra la honestidad.", "section": "colors" },
+      { "name": "La Regla del Panzón", "body": "El display siempre Baloo 2; el system font nunca es la voz display de la marca.", "section": "typography" },
+      { "name": "La Regla del Repostero", "body": "Toda sombra lleva offset y blur; si no se lee como papel sobre la mesa, no se usa.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar crema #FFF3E9 como único fondo y blobs pastel para que nunca sea plano",
+      "Do emparejar cada pastel de chip con la tinta profunda de su mismo tono",
+      "Do animar con muelles y un momento firma por pantalla",
+      "Do nombrar lo simulado con su nota demo en cada módulo social"
+    ],
+    "donts": [
+      "Don't usar gris como tinta sobre superficies de color, ni halos de sombra sin offset",
+      "Don't usar emoji como sistema de íconos (solo avatar del usuario o texto de mensaje)",
+      "Don't inventar reseñas, distancias reales ni fotos no autorizadas",
+      "Don't poner kickers/eyebrows sobre los títulos",
+      "Don't poner el rosa #F43F6D detrás de texto pequeño"
+    ]
+  }
+}
